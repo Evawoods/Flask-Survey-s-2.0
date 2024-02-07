@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %} Flask Survey {% endblock %}</title>
+    <link rel="stylesheet" href="/static/app.css">
+</head>
+<body>
+    <header>Survey's by Springboard</header>
+    <main>
+    {% for msg in get_flashed_messages() %}
+        <P>{{ msg }}</P>
+    {% endfor %}
+    {% block content %}
+    {% endblock %}
+    </main>
+    <footer>Copyright &copy; Survey's by Springboard</footer>
+</body>
+</html>
